@@ -29,7 +29,7 @@ CTeachter::~CTeachter()
 
 void CTeachter::Score()
 {
-	if(TTitle=="教授") Titlescore=20;
+	if(TTitle=="Professor") Titlescore=20;
 	else if(TTitle=="副教授") Titlescore=16;
 	else if(TTitle=="讲师") Titlescore=12;
 	else Titlescore=8;

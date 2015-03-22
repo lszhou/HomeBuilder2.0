@@ -202,9 +202,5 @@ SOURCE=.\res\P07008217_7Doc.ico
 SOURCE=.\res\Toolbar.bmp
 # End Source File
 # End Group
-# Begin Source File
-
-SOURCE=.\ReadMe.txt
-# End Source File
 # End Target
 # End Project
