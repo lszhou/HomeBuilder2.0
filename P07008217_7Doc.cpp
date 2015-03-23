@@ -113,11 +113,4 @@ void CP07008217_7Doc::OnInputTeachter()
 	TSignup TDlg;
 	TDlg.pDoc=this;
 	TDlg.DoModal();
-	//提示，此处可对对话框空间关联成员变量初始化
-
-//DEL void CP07008217_7Doc::OnUpdateInputTeachter(CCmdUI* pCmdUI) 
-//DEL {
-//DEL 	// TODO: Add your command update UI handler code here
-//DEL 	
-//DEL }
 }

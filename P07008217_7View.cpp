@@ -126,33 +126,33 @@ void CP07008217_7View::OnOutputTeachter()
 	CListCtrl& ListCtrl = GetListCtrl();
 	while(ListCtrl.DeleteColumn(0)){};
 	ListCtrl.DeleteAllItems();
-	ListCtrl.InsertColumn(0,"户主");
+	ListCtrl.InsertColumn(0,"Name");
 	ListCtrl.SetColumnWidth(0,100);
-	ListCtrl.InsertColumn(1,"性别");
+	ListCtrl.InsertColumn(1,"Gender");
 	ListCtrl.SetColumnWidth(1,100);
-	ListCtrl.InsertColumn(2,"出生日期");
+	ListCtrl.InsertColumn(2,"Date of Birth");
 	ListCtrl.SetColumnWidth(2,100);
-	ListCtrl.InsertColumn(3,"工作日期");
+	ListCtrl.InsertColumn(3,"When did you start to work");
 	ListCtrl.SetColumnWidth(3,100);
-	ListCtrl.InsertColumn(4,"职称");
+	ListCtrl.InsertColumn(4,"Title");
 	ListCtrl.SetColumnWidth(4,100);
- 	ListCtrl.InsertColumn(5,"最后学历");
+ 	ListCtrl.InsertColumn(5,"Highest Degree");
 	ListCtrl.SetColumnWidth(5,100);
-	ListCtrl.InsertColumn(6,"现住房等级");
+	ListCtrl.InsertColumn(6,"Current House Level");
 	ListCtrl.SetColumnWidth(6,100);
-	ListCtrl.InsertColumn(7,"申请住房等级");
+	ListCtrl.InsertColumn(7,"Application of House Level");
 	ListCtrl.SetColumnWidth(7,100);
-	ListCtrl.InsertColumn(8,"现住房面积");
+	ListCtrl.InsertColumn(8,"Curent Residential Area ");
 	ListCtrl.SetColumnWidth(8,100);
-	ListCtrl.InsertColumn(9,"年龄分");
+	ListCtrl.InsertColumn(9,"Age Grades");
 	ListCtrl.SetColumnWidth(9,100);
-	ListCtrl.InsertColumn(10,"工龄分");
+	ListCtrl.InsertColumn(10,"Seniority Grades");
 	ListCtrl.SetColumnWidth(10,100);
-	ListCtrl.InsertColumn(11,"职称分");
+	ListCtrl.InsertColumn(11,"Title Grades");
 	ListCtrl.SetColumnWidth(11,100);
-	ListCtrl.InsertColumn(12,"学龄分");
+	ListCtrl.InsertColumn(12,"Degree Grades");
 	ListCtrl.SetColumnWidth(12,100);
-	ListCtrl.InsertColumn(13,"总分");
+	ListCtrl.InsertColumn(13,"Total");
 	ListCtrl.SetColumnWidth(13,100);
 
 	int i,j;
@@ -178,7 +178,7 @@ void CP07008217_7View::OnOutputTeachter()
 	for(i = 0;i < sum;i++)
 	{
 		pTeachter = pDoc->mTeachterArray[i];
-		if(pTeachter->STGrade!="一室")continue;
+		if(pTeachter->STGrade!="One Bedroom")continue;
 		pTeachter->Score();
 		Str.Format("%s",pTeachter->TName);
 		ListCtrl.InsertItem(i,Str);
@@ -241,7 +241,7 @@ void CP07008217_7View::OnOutputTeachter()
 	for(i = 0;i < sum;i++)
 	{
 		pTeachter = pDoc->mTeachterArray[i];
-		if(pTeachter->STGrade!="一室一厅")continue;
+		if(pTeachter->STGrade!="One Bedroom with Living Room")continue;
 		pTeachter->Score();
 		Str.Format("%s",pTeachter->TName);
 		ListCtrl.InsertItem(i,Str);
@@ -303,7 +303,7 @@ void CP07008217_7View::OnOutputTeachter()
 	for(i = 0;i < sum;i++)
 	{
 		pTeachter = pDoc->mTeachterArray[i];
-		if(pTeachter->STGrade!="二室")continue;
+		if(pTeachter->STGrade!="Two Bedrooms")continue;
 		pTeachter->Score();
 		Str.Format("%s",pTeachter->TName);
 		ListCtrl.InsertItem(i,Str);
@@ -365,7 +365,7 @@ void CP07008217_7View::OnOutputTeachter()
 	for(i = 0;i < sum;i++)
 	{
 		pTeachter = pDoc->mTeachterArray[i];
-		if(pTeachter->STGrade!="二室一厅")continue;
+		if(pTeachter->STGrade!="Two Bedrooms with Living Room")continue;
 		pTeachter->Score();
 		Str.Format("%s",pTeachter->TName);
 		ListCtrl.InsertItem(i,Str);
@@ -427,7 +427,7 @@ void CP07008217_7View::OnOutputTeachter()
 	for(i = 0;i < sum;i++)
 	{
 		pTeachter = pDoc->mTeachterArray[i];
-		if(pTeachter->STGrade!="三室")continue;
+		if(pTeachter->STGrade!="Three Bedrooms")continue;
 		pTeachter->Score();
 		Str.Format("%s",pTeachter->TName);
 		ListCtrl.InsertItem(i,Str);
@@ -489,7 +489,7 @@ void CP07008217_7View::OnOutputTeachter()
 	for(i = 0;i < sum;i++)
 	{
 		pTeachter = pDoc->mTeachterArray[i];
-		if(pTeachter->STGrade!="三室一厅")continue;
+		if(pTeachter->STGrade!="Three Bedrooms with Living Room")continue;
 		pTeachter->Score();
 		Str.Format("%s",pTeachter->TName);
 		ListCtrl.InsertItem(i,Str);
@@ -576,21 +576,21 @@ void CP07008217_7View::ShowCheck()
 	CListCtrl& ListCtrl = GetListCtrl();
 	while(ListCtrl.DeleteColumn(0)){};
 	ListCtrl.DeleteAllItems();
-	ListCtrl.InsertColumn(0,"户主");
+	ListCtrl.InsertColumn(0,"Name");
 	ListCtrl.SetColumnWidth(0,100);
-	ListCtrl.InsertColumn(1,"性别");
+	ListCtrl.InsertColumn(1,"Gender");
 	ListCtrl.SetColumnWidth(1,100);
-	ListCtrl.InsertColumn(2,"出生日期");
+	ListCtrl.InsertColumn(2,"Date of Birth");
 	ListCtrl.SetColumnWidth(2,100);
-	ListCtrl.InsertColumn(3,"工作日期");
+	ListCtrl.InsertColumn(3,"When Did You Start to Work");
 	ListCtrl.SetColumnWidth(3,100);
-	ListCtrl.InsertColumn(4,"职称");
+	ListCtrl.InsertColumn(4,"Title");
 	ListCtrl.SetColumnWidth(4,100);
- 	ListCtrl.InsertColumn(5,"最后学历");
+ 	ListCtrl.InsertColumn(5,"Highest Degree");
 	ListCtrl.SetColumnWidth(5,100);
-	ListCtrl.InsertColumn(6,"现住房等级");
+	ListCtrl.InsertColumn(6,"Current House Level");
 	ListCtrl.SetColumnWidth(6,100);
-	ListCtrl.InsertColumn(7,"现住房面积");
+	ListCtrl.InsertColumn(7,"Current Residential Area");
 	ListCtrl.SetColumnWidth(7,100);
 
 

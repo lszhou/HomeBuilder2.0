@@ -24,12 +24,12 @@ TSignup::TSignup(CWnd* pParent /*=NULL*/)
 	m_CDTTBirthday = COleDateTime::GetCurrentTime();
 	m_STName = _T("");
 	m_CDTTWorkday = COleDateTime::GetCurrentTime();
-	m_TTitle = _T("请选择一个职称");
-	m_TRecord = _T("请选择一个学历");
+	m_TTitle = _T("Please Select Your Title");
+	m_TRecord = _T("Please Select Highest Degree");
 	pTeachter=new CTeachter;
-	m_SGrade = _T("请选择一个住房等级");
-	sex="女";
-	married="未婚";
+	m_SGrade = _T("Please select Your Hourse Level");
+	sex="Female";
+	married="Single";
 	//}}AFX_DATA_INIT
 
 }
@@ -99,7 +99,7 @@ void TSignup::OnMember()
 
 void TSignup::OnTMan() 
 {
-	sex="男";// TODO: Add your control notification handler code here
+	sex="Male";// TODO: Add your control notification handler code here
 	
 }
 
@@ -132,6 +132,6 @@ void TSignup::OnKillfocusTTitle()
 
 void TSignup::OnTMarried() 
 {
-	married="已婚";// TODO: Add your control notification handler code here
+	married="Married";// TODO: Add your control notification handler code here
 	
 }

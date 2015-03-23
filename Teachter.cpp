@@ -31,11 +31,11 @@ void CTeachter::Score()
 {
 	if(TTitle=="Professor") Titlescore=20;
 	else if(TTitle=="Associated Professor") Titlescore=16;
-	else if(TTitle=="讲师") Titlescore=12;
+	else if(TTitle=="Instructor") Titlescore=12;
 	else Titlescore=8;
-	if(TRecord=="博士") Recordscore=4.5;
-	else if(TRecord=="硕士") Recordscore=3.25;
-	else if(TRecord=="本科") Recordscore=2;
+	if(TRecord=="Doctor") Recordscore=4.5;
+	else if(TRecord=="Master") Recordscore=3.25;
+	else if(TRecord=="Bachelor") Recordscore=2;
 	else Recordscore=0;
 	COleDateTime odt=COleDateTime::GetCurrentTime();
 	if(odt.GetMonth()>=TWorkday.GetMonth())

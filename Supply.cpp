@@ -20,7 +20,7 @@ Supply::Supply(CWnd* pParent /*=NULL*/)
 {
 	//{{AFX_DATA_INIT(Supply)
 	m_SName = _T("");
-	m_Grade = _T("请选择一个等级");
+	m_Grade = _T("Please Select a Level");
 	//}}AFX_DATA_INIT
 }
 
