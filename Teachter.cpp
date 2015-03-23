@@ -30,7 +30,7 @@ CTeachter::~CTeachter()
 void CTeachter::Score()
 {
 	if(TTitle=="Professor") Titlescore=20;
-	else if(TTitle=="副教授") Titlescore=16;
+	else if(TTitle=="Associated Professor") Titlescore=16;
 	else if(TTitle=="讲师") Titlescore=12;
 	else Titlescore=8;
 	if(TRecord=="博士") Recordscore=4.5;
