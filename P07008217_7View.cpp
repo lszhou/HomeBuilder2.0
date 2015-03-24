@@ -640,9 +640,9 @@ void CP07008217_7View::OnOutputProfessior()
 	CListCtrl& ListCtrl = GetListCtrl();
 	while(ListCtrl.DeleteColumn(0)){};
 	ListCtrl.DeleteAllItems();
-	ListCtrl.InsertColumn(0,"教授姓名");
+	ListCtrl.InsertColumn(0,"Professor Name");
 	ListCtrl.SetColumnWidth(0,100);
-	ListCtrl.InsertColumn(1,"现住房等级");
+	ListCtrl.InsertColumn(1,"Current Residential Level");
 	ListCtrl.SetColumnWidth(1,100);
 	int i,j,sum=0;
 	CString Str;
@@ -651,7 +651,7 @@ void CP07008217_7View::OnOutputProfessior()
 	for(i = 0;i < pDoc->mTeachterArray.GetSize();i++)
 	{
 		CTeachter*pTe=pDoc->mTeachterArray[i];
-		if(pTe->TGrade=="三室一厅"||pTe->married=="三室"||pTe->TRecord!="副教授")continue;
+		if(pTe->TGrade=="Three-bedroom with Living Room"||pTe->married=="Three-bedroom"||pTe->TRecord!="Associated Professor")continue;
 		sum++;
 		Str.Format("%s",pTeachter->TName);
 		ListCtrl.InsertItem(i,Str);
@@ -661,7 +661,7 @@ void CP07008217_7View::OnOutputProfessior()
 		ListCtrl.SetItem(i,j,LVIF_TEXT,Str,0,0,0,NULL);
 		j++;
 	}
-	Str.Format("%s","本类教师的总数");
+	Str.Format("%s","Total");
 	ListCtrl.InsertItem(i,Str);
 	j = 1;
 
@@ -676,9 +676,9 @@ void CP07008217_7View::OnOutputTeacher()
 	CListCtrl& ListCtrl = GetListCtrl();
 	while(ListCtrl.DeleteColumn(0)){};
 	ListCtrl.DeleteAllItems();
-	ListCtrl.InsertColumn(0,"教授姓名");
+	ListCtrl.InsertColumn(0,"Professor Name");
 	ListCtrl.SetColumnWidth(0,100);
-	ListCtrl.InsertColumn(1,"住房标准");
+	ListCtrl.InsertColumn(1,"Room standard");
 	ListCtrl.SetColumnWidth(1,100);
 	int i,j;
 	CString Str;
@@ -687,7 +687,7 @@ void CP07008217_7View::OnOutputTeacher()
 	for(i = 0;i < pDoc->mTeachterArray.GetSize();i++)
 	{
 		CTeachter*pTe=pDoc->mTeachterArray[i];
-		if(pTe->TGrade!="集体宿舍"&&pTe->TGrade!="一室"||pTe->TRecord!="博士")continue;
+		if(pTe->TGrade!="Domitory"&&pTe->TGrade!="One-bedroom"||pTe->TRecord!="Doctor")continue;
 		Str.Format("%s",pTeachter->TName);
 		ListCtrl.InsertItem(i,Str);
 		j = 1;
@@ -704,9 +704,9 @@ void CP07008217_7View::OnOutputMarried()
 /**/	CListCtrl& ListCtrl = GetListCtrl();
 	while(ListCtrl.DeleteColumn(0)){};
 	ListCtrl.DeleteAllItems();
-	ListCtrl.InsertColumn(0,"户主");
+	ListCtrl.InsertColumn(0,"Householder");
 	ListCtrl.SetColumnWidth(0,100);
-	ListCtrl.InsertColumn(1,"出生年月");
+	ListCtrl.InsertColumn(1,"Date of Birth");
 	ListCtrl.SetColumnWidth(1,100);
 	int i,j,sum=0;
 	CString Str;
@@ -715,7 +715,7 @@ void CP07008217_7View::OnOutputMarried()
 	for(i = 0;i < pDoc->mTeachterArray.GetSize();i++)
 	{
 		CTeachter*pTe=pDoc->mTeachterArray[i];
-		if(pTe->TGrade!="集体宿舍"||pTe->married!="已婚")continue;
+		if(pTe->TGrade!="Dormitory"||pTe->married!="Married")continue;
 		sum++;
 		Str.Format("%s",pTeachter->TName);
 		ListCtrl.InsertItem(i,Str);
@@ -725,7 +725,7 @@ void CP07008217_7View::OnOutputMarried()
 		ListCtrl.SetItem(i,j,LVIF_TEXT,Str,0,0,0,NULL);
 		j++;
 	}
-	Str.Format("%s","本类教师的总数");
+	Str.Format("%s","Total");
 	ListCtrl.InsertItem(i,Str);
 	j = 1;
 
@@ -753,14 +753,9 @@ void CP07008217_7View::OnOutputArea()
 		number+=pTe->mMemberArray.GetSize()+1;
 	}
 
-	ListCtrl.InsertColumn(0,"全校教师人均(包括家庭人口)住房面积");
+	ListCtrl.InsertColumn(0,"Average Residential Area");
 	ListCtrl.SetColumnWidth(0,400);
 	Str.Format("%.2f",areasum/(double) number);
 	ListCtrl.InsertItem(i,Str);
 	
 }
-/*    3．可输出婚后仍分居集体宿舍者的户主姓名及出生年月，这本类教师的总数。
-    4．可输出未住上三室一厅或三室的副教授，教授姓名及现住房标准，这类教师的总数。
-    5．可输出未住上一室一厅及以上等级的具有博士学位的教师姓名及住房标准。
-6．可输出全校教师人均(包括家庭人口)住房面积。
-*/
