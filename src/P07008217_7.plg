@@ -6,21 +6,80 @@
 --------------------Configuration: P07008217_7 - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\lszhou\AppData\Local\Temp\RSPCDA1.tmp" with contents
+Creating command line "rc.exe /l 0x804 /fo"Debug/P07008217_7.res" /d "_DEBUG" /d "_AFXDLL" "C:\Users\lszhou\Desktop\HomeBuilder2.0\src\P07008217_7.rc"" 
+Creating temporary file "C:\Users\lszhou\AppData\Local\Temp\RSP9D5.tmp" with contents
 [
 /nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/P07008217_7.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"C:\Users\lszhou\workspace\HomeBuilder2.0\src\Supply.cpp"
+"C:\Users\lszhou\Desktop\HomeBuilder2.0\src\MainFrm.cpp"
+"C:\Users\lszhou\Desktop\HomeBuilder2.0\src\Member.cpp"
+"C:\Users\lszhou\Desktop\HomeBuilder2.0\src\MSignup.cpp"
+"C:\Users\lszhou\Desktop\HomeBuilder2.0\src\P07008217_7.cpp"
+"C:\Users\lszhou\Desktop\HomeBuilder2.0\src\P07008217_7Doc.cpp"
+"C:\Users\lszhou\Desktop\HomeBuilder2.0\src\P07008217_7View.cpp"
+"C:\Users\lszhou\Desktop\HomeBuilder2.0\src\Supply.cpp"
+"C:\Users\lszhou\Desktop\HomeBuilder2.0\src\Teachter.cpp"
+"C:\Users\lszhou\Desktop\HomeBuilder2.0\src\TSignup.cpp"
 ]
-Creating command line "cl.exe @C:\Users\lszhou\AppData\Local\Temp\RSPCDA1.tmp" 
+Creating command line "cl.exe @C:\Users\lszhou\AppData\Local\Temp\RSP9D5.tmp" 
+Creating temporary file "C:\Users\lszhou\AppData\Local\Temp\RSP9D6.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/P07008217_7.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\lszhou\Desktop\HomeBuilder2.0\src\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\lszhou\AppData\Local\Temp\RSP9D6.tmp" 
+Creating temporary file "C:\Users\lszhou\AppData\Local\Temp\RSP9D7.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/P07008217_7.pdb" /debug /machine:I386 /out:"Debug/P07008217_7.exe" /pdbtype:sept 
+.\Debug\MainFrm.obj
+.\Debug\Member.obj
+.\Debug\MSignup.obj
+.\Debug\P07008217_7.obj
+.\Debug\P07008217_7Doc.obj
+.\Debug\P07008217_7View.obj
+.\Debug\StdAfx.obj
+.\Debug\Supply.obj
+.\Debug\Teachter.obj
+.\Debug\TSignup.obj
+.\Debug\P07008217_7.res
+]
+Creating command line "link.exe @C:\Users\lszhou\AppData\Local\Temp\RSP9D7.tmp"
 <h3>Output Window</h3>
+Compiling resources...
 Compiling...
-Skipping... (no relevant changes detected)
+StdAfx.cpp
+Compiling...
+MainFrm.cpp
+Member.cpp
+MSignup.cpp
+P07008217_7.cpp
+P07008217_7Doc.cpp
+P07008217_7View.cpp
 Supply.cpp
+Teachter.cpp
+TSignup.cpp
+Generating Code...
+Linking...
+Creating temporary file "C:\Users\lszhou\AppData\Local\Temp\RSP176F.tmp" with contents
+[
+/nologo /o"Debug/P07008217_7.bsc" 
+.\Debug\StdAfx.sbr
+.\Debug\MainFrm.sbr
+.\Debug\Member.sbr
+.\Debug\MSignup.sbr
+.\Debug\P07008217_7.sbr
+.\Debug\P07008217_7Doc.sbr
+.\Debug\P07008217_7View.sbr
+.\Debug\Supply.sbr
+.\Debug\Teachter.sbr
+.\Debug\TSignup.sbr]
+Creating command line "bscmake.exe @C:\Users\lszhou\AppData\Local\Temp\RSP176F.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
 
 
 
 <h3>Results</h3>
-Supply.obj - 0 error(s), 0 warning(s)
+P07008217_7.exe - 0 error(s), 0 warning(s)
 </pre>
 </body>
 </html>
